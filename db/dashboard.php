@@ -90,11 +90,11 @@ include('includes/navbar.php');
 
                                         <div class="form-group">
                                             <label>Your username</label>
-                                            <input type="text" name="username" id="name" class="form-control" value="<?= $_SESSION['auth_user']['username']; ?>" disabled="disabled">   
+                                            <input type="text" name="username" id="name" class="form-control" value="<?= $_SESSION['auth_user']['username']; ?>">   
                                         </div>
                                         <div class="form-group">
                                             <label>Your email</label>
-                                            <input type="text" name="email" id="email" class="form-control" value="<?= $_SESSION['auth_user']['email']; ?>" disabled="disabled">   
+                                            <input type="text" name="email" id="email" class="form-control" value="<?= $_SESSION['auth_user']['email']; ?>">   
                                         </div>
                                         <div class="form-group">
                                             <label>How old are you?</label>
@@ -121,7 +121,7 @@ include('includes/navbar.php');
                                         <br>
                                         <div class="form-group">
                                             <label>Telescope</label>
-                                            <input type="text" name="telescope1" id="name" class="form-control" value="Newtonian telescope (TS Photon 6, 150/600 f/5)" disabled="disabled">   
+                                            <input type="text" name="telescope1" id="name" class="form-control" value="Newtonian telescope (TS Photon 6, 150/750 f/5)">   
                                         </div>
                                         <label>Which filter would you like to use?</label>
                                         <br>
@@ -293,12 +293,12 @@ include('includes/navbar.php');
                         </div>
                     </div>
                     <div class="card" style="background-color: rgba(200, 200, 200, 0.65); border-radius: 30px;">
-                        <img src="setup1.jpg" class="card-img-top" alt="..." style="max-width: 100%; height: 50%; object-fit:cover">
+                        <img src="setup2.jpg" class="card-img-top" alt="..." style="max-width: 100%; height: 50%; object-fit:cover">
                         <div class="card-body">
                         <h3 class="card-title">Setup 2</h3>
                         <b>
                         <p class="card-text">Mount - Skywatcher EQ6-r pro</p>
-                        <p class="card-text">Telescope - TS photon 150/750 f5</p>
+                        <p class="card-text">Telescope - Samyang lens (135mm, f/2 - f/22)</p>
                         <p class="card-text">Camera - TS533c</p>
                         <p class="card-text">Guidescope - TS 50mm</p>
                         <p class="card-text">Guide camera - Zwo asi 120mm mini</p>
@@ -314,209 +314,198 @@ include('includes/navbar.php');
                                             <span aria-hidden="true">×</span>
                                         </button>
                                     </div>
-                                    <form method="post" id="contactFrm">
+                                    <form action="dashboard-form2-send.php" method="POST">
                                     <div class="modal-body">
                                         <div class="response"></div>
 
                                         <div class="form-group">
                                             <label>Your username</label>
-                                            <input type="text" name="name" id="name" class="form-control" value="<?= $_SESSION['auth_user']['username']; ?>" disabled="disabled">   
+                                            <input type="text" name="username" id="name" class="form-control" value="<?= $_SESSION['auth_user']['username']; ?>">   
                                         </div>
                                         <div class="form-group">
                                             <label>Your email</label>
-                                            <input type="text" name="email" id="email" class="form-control" value="<?= $_SESSION['auth_user']['email']; ?>" disabled="disabled">   
+                                            <input type="text" name="email" id="email" class="form-control" value="<?= $_SESSION['auth_user']['email']; ?>">   
                                         </div>
                                         <div class="form-group">
                                             <label>How old are you?</label>
-                                            <input type="text" name="email" id="email" class="form-control" placeholder="Your age in numbers" required="">   
+                                            <input type="text" name="age" id="email" class="form-control" placeholder="Your age in numbers" required="">   
                                         </div>
                                         <label>Which camera would you like to use?</label>
                                         <br>
                                         <label>
-                                            <input type="radio" name="radio" value="TS 533c">TS 533c cooled - available
+                                            <input type="radio" name="camera" value="TS 533c">TS 533c cooled - available
                                         </label>
                                         <br>
                                         <label>
-                                        <input type="radio" name="radio" value="Nikon d5300">Nikon d5300 (stock) - available
+                                        <input type="radio" name="camera" value="Nikon d5300">Nikon d5300 (stock) - available
                                         </label>
                                         <br>
                                         <label>
-                                            <input type="radio" name="radio" value="ZWO asi533mm">ZWO asi533mm pro - unvailable
+                                            <input type="radio" name="camera" value="ZWO asi533mm">ZWO asi533mm pro - unvailable
                                         </label>
                                         <br>
                                         <label>
-                                            <input type="radio" name="radio" value="ZWO asi533mc">ZWO asi533mc pro - unvailable
+                                            <input type="radio" name="camera" value="ZWO asi533mc">ZWO asi533mc pro - unvailable
                                         </label>
                                         <br>
                                         <br>
                                         <div class="form-group">
                                             <label>Telescope</label>
-                                            <input type="text" name="telescope2" id="name" class="form-control" value="Samyang lens (135mm, f/2 - f/22)" disabled="disabled">   
+                                            <input type="text" name="telescope1" id="name" class="form-control" value="Samyang lens (135mm, f/2 - f/22)">   
                                         </div>
                                         <label>Which filter would you like to use?</label>
                                         <br>
                                         <label>
-                                            <input type="radio" name="radio" value="TS 533c">Optolong L-pro (broadband) - available
+                                            <input type="radio" name="filter" value="Optolong L-pro">Optolong L-pro (broadband) - available
                                         </label>
                                         <br>
                                         <label>
-                                            <input type="radio" name="radio" value="ZWO UV-IR cut">ZWO UV-IR cut (broadband) - available
+                                            <input type="radio" name="filter" value="ZWO UV-IR cut">ZWO UV-IR cut (broadband) - available
                                         </label>
                                         <br>
                                         <label>
-                                            <input type="radio" name="radio" value="Optolong L-pro">Optolong L-Ultimate (narrowband) - available
+                                            <input type="radio" name="filter" value="Optolong L-Ultimate">Optolong L-Ultimate (narrowband) - available
                                         </label>
                                         <br>
                                         <br>
                                         <label>Please select or write how long subs would you like to take: (not necessary if you will take control over N.I.N.A.?</label>
                                         <br>
                                         <label>
-                                            <input type="radio" name="radio" value="30sec">30sec
+                                            <input type="radio" name="sub" value="30sec">30sec
                                         </label>
                                         <br>
                                         <label>
-                                        <input type="radio" name="radio" value="Nikon 1min">1min
+                                        <input type="radio" name="sub" value="1min">1min
                                         </label>
                                         <br>
                                         <label>
-                                            <input type="radio" name="radio" value="90sec">90sec
+                                            <input type="radio" name="sub" value="90sec">90sec
                                         </label>
                                         <br>
                                         <label>
-                                            <input type="radio" name="radio" value="2min">2min
+                                            <input type="radio" name="sub" value="2min">2min
                                         </label>
                                         <br>
                                         <label>
-                                            <input type="radio" name="radio" value="3min">3min
+                                            <input type="radio" name="sub" value="3min">3min
                                         </label>
                                         <br>
                                         <label>
-                                            <input type="radio" name="radio" value="5min">5min
+                                            <input type="radio" name="sub" value="5min">5min
                                         </label>
                                         <br>
                                         <br>
                                         <label>What exposure time would you like to have? (more=better) Max. exposure time is 15hrs.</label>
                                         <br>
                                         <label>
-                                            <input type="radio" name="radio" value="30sec">1hr
+                                            <input type="radio" name="exposure" value="1hr">1hr
                                         </label>
                                         <br>
                                         <label>
-                                        <input type="radio" name="radio" value="Nikon 1min">2hrs
+                                        <input type="radio" name="exposure" value="2hrs">2hrs
                                         </label>
                                         <br>
                                         <label>
-                                            <input type="radio" name="radio" value="90sec">3hrs
+                                            <input type="radio" name="exposure" value="3hrs">3hrs
                                         </label>
                                         <br>
                                         <label>
-                                            <input type="radio" name="radio" value="2min">5hrs
+                                            <input type="radio" name="exposure" value="5hrs">5hrs
                                         </label>
                                         <br>
                                         <label>
-                                            <input type="radio" name="radio" value="3min">10hrs
+                                            <input type="radio" name="exposure" value="10hrs">10hrs
                                         </label>
                                         <br>
                                         <label>
-                                            <input type="radio" name="radio" value="5min">15hrs
+                                            <input type="radio" name="exposure" value="15hrs">15hrs
                                         </label>
                                         <br>
                                         <br>
                                         <div class="form-group">
                                             <label>Which target would you like to shoot? (make sure it is visible at the current time/season) Please use scientific names, because it'll make all the work so much easier (NGC6960, M42, IC342). If your target does not have a scientific name, enter coordinates!</label>
-                                            <input type="text" name="target2" id="target2" class="form-control" placeholder="For coordinates please enter in j2000 format" required="">   
+                                            <input type="text" name="target1" id="target1" class="form-control" placeholder="For coordinates please enter in j2000 format" required="">   
                                         </div>
                                         <div class="form-group"> <!-- Date input -->
                                             <label for="date2">On which day would you like to image?</label>
                                             <br>
-                                            <input type="date" id="date2" name="date2">
+                                            <input type="date" id="date2" name="date1">
                                         </div>
                                         <br>
                                         <label>Imaging session help/instructions (per 30min) - 5€ <br> Help with N.I.N.A. and PHD2</label>
                                         <br>
                                         <label>
-                                            <input type="radio" name="HelpNo2" value="No">Yes
+                                            <input type="radio" name="help" value="Yes">Yes
                                         </label>
                                         <br>
                                         <label>
-                                            <input type="radio" name="HelpNo2" value="No">No
+                                            <input type="radio" name="help" value="No">No
                                         </label>
                                         <br>
                                         <br>
                                         <label>Whole calibration set  - darks, flats, darkflats, 2€</label>
                                         <br>
                                         <label>
-                                            <input type="radio" name="HelpNo2" value="Yes">Yes
+                                            <input type="radio" name="calibration" value="Yes">Yes
                                         </label>
                                         <br>
                                         <label>
-                                            <input type="radio" name="HelpNo2" value="No">No
+                                            <input type="radio" name="calibration" value="No">No
                                         </label>
                                         <br>
                                         <br>
                                         <label>Processing session, 1v1 or pre-recorded (per hour) - 25€</label>
                                         <br>
                                         <label>
-                                            <input type="radio" name="HelpNo2" value="Yes">Yes
+                                            <input type="radio" name="processing" value="Yes">Yes
                                         </label>
                                         <br>
                                         <label>
-                                            <input type="radio" name="HelpNo2" value="No">No
+                                            <input type="radio" name="processing" value="No">No
                                         </label>
                                         <br>
                                         <br>
                                         <label>Do you want to see what the imaging program is doing - be online via TeamViewer when the telescope is imaging?</label>
                                         <br>
                                         <label>
-                                            <input type="radio" name="HelpNo2" value="Yes">Yes - aditional 10€
+                                            <input type="radio" name="live" value="Yes">Yes - aditional 10€
                                         </label>
                                         <br>
                                         <label>
-                                            <input type="radio" name="HelpNo2" value="No">No
+                                            <input type="radio" name="live" value="No">No
                                         </label>
                                         <br>
                                         <br>
                                         <label>Would you like us to send you individual stacks, or all raw files and calibration frames?</label>
                                         <br>
                                         <label>
-                                            <input type="radio" name="HelpNo2" value="Yes">Individual stacks
+                                            <input type="radio" name="stack" value="Individual stacks">Individual stacks
                                         </label>
                                         <br>
                                         <label>
-                                            <input type="radio" name="HelpNo2" value="No">All raw files and calibration frames - 10€
-                                        </label>
-                                        <br>
-                                        <br>
-                                        <label>What payment method would you like to use?</label>
-                                        <br>
-                                        <label>
-                                            <input type="radio" name="HelpNo2" value="Yes">Bank transfer
-                                        </label>
-                                        <br>
-                                        <label>
-                                            <input type="radio" name="HelpNo2" value="No">PayPal
+                                            <input type="radio" name="stack" value="All raw files and calibration frames">All raw files and calibration frames - 10€
                                         </label>
                                         <br>
                                         <br>
                                         <label>What payment method would you like to use?</label>
                                         <br>
                                         <label>
-                                            <input type="radio" name="HelpNo2" value="Yes">Bank transfer
+                                            <input type="radio" name="payment" value="Bank transfer">Bank transfer
                                         </label>
                                         <br>
                                         <label>
-                                            <input type="radio" name="HelpNo2" value="No">PayPal
+                                            <input type="radio" name="payment" value="PayPal">PayPal
                                         </label>
                                         <br>
                                         <br>
                                         <label>To wrap it all up. Where would you like your data to be sent at?</label>
                                         <br>
                                         <label>
-                                            <input type="radio" name="HelpNo2" value="Yes">Mail stated at the beginning of this template
+                                            <input type="radio" name="data" value="Mail stated at the beginning of this form">Mail stated at the beginning of this form
                                         </label>
                                         <br>
                                         <label>
-                                            <input type="radio" name="HelpNo2" value="No">Download from our personal server
+                                            <input type="radio" name="data" value="Download from personal server">Download from our personal server
                                         </label>
                                         <br>
                                         <br>
