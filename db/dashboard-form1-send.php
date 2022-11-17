@@ -1,4 +1,7 @@
 <?php
+
+//THIS CODE IS VERIFIED :)
+
 session_start();
 include('config/functions.php');
 
