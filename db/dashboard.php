@@ -1,5 +1,7 @@
+
+<link href="assets/img/icon.png" rel="icon">
 <?php 
-include('authentication.php');
+
 
 $page_title = "Dashboard";
 include('includes/header.php'); 
@@ -525,14 +527,14 @@ include('includes/navbar.php');
                     <div class="card" style="background-color: rgba(200, 200, 200, 0.65); border-radius: 30px;">
                         <img src="setup2.jpg" class="card-img-top" alt="..." style="max-width: 100%; height: 50%; object-fit:cover">
                         <div class="card-body">
-                        <h3 class="card-title">NEW Spain setup</h3>
+                        <h3 class="card-title">NEW: Spain setup</h3>
                         <b>
-                        <p class="card-text">Mount - Skywatcher EQ6-r pro</p>
-                        <p class="card-text">Telescope - Samyang lens (135mm, f/2 - f/22)</p>
-                        <p class="card-text">Camera - TS533c</p>
-                        <p class="card-text">Guidescope - TS 50mm</p>
-                        <p class="card-text">Guide camera - Zwo asi 120mm mini</p>
-                        <p class="card-text">Filters - optolong l-pro, optolong l-ultimate or zwo uv/ir cut</p>
+                        <p class="card-text">Mount - Ioptron CEM70</p>
+                        <p class="card-text">Telescope - Skywatcher esprit 100</p>
+                        <p class="card-text">Camera - QHY 268M</p>
+                        <p class="card-text">.</p>
+                        <p class="card-text">.</p>
+                        <p class="card-text">Filters - LRGB, Baader SHO</p>
                         <br>
                         <button id="mbtn3" class="btn btn-primary" style="background-color: rgba(100, 100, 100, 0.5) !important;">COMING SOON!</button>
                         </b>
@@ -961,4 +963,3 @@ $('body').bind('click', function(e){
 });
 </script>
 <?php include('includes/footer.php'); ?>
-
