@@ -1,9 +1,9 @@
 <?php
 
 $host = "localhost";
-$username = "phpmyadmin";
-$password = "rootroot";
-$database = "online-astro";
+$username = "root";
+$password = "YOUR_PASSWORD_HERE";
+$database = "OnlineAstro";
 
 $con = mysqli_connect($host, $username, $password, $database);
 
