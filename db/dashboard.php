@@ -1,4 +1,4 @@
-
+include("authentication.php");
 <link href="assets/img/icon.png" rel="icon">
 <?php 
 
