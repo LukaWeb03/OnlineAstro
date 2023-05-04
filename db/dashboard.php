@@ -1,7 +1,7 @@
-include("authentication.php");
+
 <link href="assets/img/icon.png" rel="icon">
 <?php 
-
+include("authentication.php");
 
 $page_title = "Dashboard";
 include('includes/header.php'); 
